@@ -7,8 +7,11 @@
             Logged in as <%= current_user.email %>
             <li><%= link_to "Log Out", session_path("current"), method: "delete" %></li>
           <% else %>
+          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Log In", new_session_path %></li>
+          <li><%= link_to "All Petition", "#" %></li>
+          <li><%= link_to "My Petition", "#" %></li>
           <% end %>
         </ul>
       </nav>
